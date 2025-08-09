@@ -4,10 +4,13 @@
  * Automatic routes for `./src/pages/*.vue`
  */
 
+// プロジェクト作ったばかりで ESLint エラーになるため無視する
+/* eslint-disable import/no-duplicates */
 import { setupLayouts } from 'virtual:generated-layouts'
 // Composables
 import { createRouter, createWebHistory } from 'vue-router/auto'
 import { routes } from 'vue-router/auto-routes'
+/* eslint-enable import/no-duplicates */
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
